@@ -1,2 +1,3 @@
 # FUTURE_FS_01
 🖥️ Task 1 for Full Stack Web Development Internship at Future Interns (CIN: FIT/JUN26/FS18820). Built using MERN/Full Stack technologies.
+Live Link : https://priyanshu6396274892.github.io/FUTURE_FS_01/
