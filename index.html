@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PERSONAL PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="mypic.png" alt="Priyanshu" class="logo-img" />
+          <span>Priyanshu</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Priyanshu</h1>
+        <h2 class="typing-text">Full Stack Web Developer Intern</h2>
+        <p>
+          I build clean, modern, and responsive Portfolio websites from scratch
+        </p>
+        <a class="btn" href="#projects">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="mypic.png" alt="Priyanshu" />
+        </div>
+        <div class="about-text">
+          <p>
+            Hi, I'm Priyanshu, a passionate and enthusiastic Web Development
+            learner. I have a strong interest in creating responsive and
+            user-friendly websites using HTML, CSS, and JavaScript. I enjoy
+            turning ideas into real projects and continuously improving my
+            skills through hands-on practice. So far, I have built projects like
+            an Amazon Clone and website clones to strengthen my frontend
+            development skills. Currently, I am learning JavaScript and
+            exploring modern web development concepts to become a full-stack
+            developer in the future. I am always eager to learn new
+            technologies, solve problems, and work on exciting projects that
+            help me grow as a developer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>HTML</h3>
+        </div>
+        <div class="skill-card">
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-card">
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+          <h3>DSA WITH CPP</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+         <h3>Amazon Clone</h3>>
+          <p>Amazon website clone using HTML and CSS</p>
+          <a href="https://amazoncloneme.netlify.app/">Live Demo</a>
+          <a href="https://github.com/priyanshu6396274892/Amazon-Clone-.git">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Code With Harry Clone</h3>
+          <p>Code with harry clone using HTML and CSS</p>
+          <a href="https://codewithharrymakebyme.netlify.app/">Live Demo</a>
+          <a href="https://github.com/priyanshu6396274892/Code-with-Harry-website-Clone-.git">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume">
+      <h2>Resume</h2>
+      <div class="resume-card">
+        <p>
+          View my complete profile including technical skills, projects,
+          education, certifications, and internship experience.
+        </p>
+        <a href="priyanshu resume.pdf" download class="btn">
+          📄 Download Resume
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" id="userName" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- javaScript start  -->
+
+    <script>
+      const myform = document.querySelector(".contact-form");
+
+      const nameinput = document.getElementById("userName");
+
+      myform.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const userTypedName = nameinput.value;
+
+        alert("Thank you " + userTypedName + "! Your message has been sent.");
+        myform.reset();
+      });
+      const targetSection = document.querySelector(".typing-text");
+
+      const words = [
+        "Full Stack Web Developer Intern",
+        "Aspiring Full Stack Developer",
+        "Passionate Coder",
+        "Tech Enthusiast",
+      ];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+     function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  if (!isDeleting && charIndex > currentWord.length) {
+    isDeleting = true;
+  } else if (isDeleting && charIndex < 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    charIndex = 0;
+  }
+
+  const currentLetter = currentWord.substring(0, charIndex);
+  targetSection.textContent = currentLetter;
+
+  setTimeout(typeEffect, isDeleting ? 75 : 150); 
+}
+      typeEffect();
+    </script>
+  </body>
+</html>
