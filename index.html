@@ -80,16 +80,22 @@
       <h2>My Projects</h2>
       <div class="projects-container">
         <div class="project-card">
-         <h3>Amazon Clone</h3>>
+          <h3>Amazon Clone</h3>
+          >
           <p>Amazon website clone using HTML and CSS</p>
           <a href="https://amazoncloneme.netlify.app/">Live Demo</a>
-          <a href="https://github.com/priyanshu6396274892/Amazon-Clone-.git">GitHub</a>
+          <a href="https://github.com/priyanshu6396274892/Amazon-Clone-.git"
+            >GitHub</a
+          >
         </div>
         <div class="project-card">
           <h3>Code With Harry Clone</h3>
           <p>Code with harry clone using HTML and CSS</p>
           <a href="https://codewithharrymakebyme.netlify.app/">Live Demo</a>
-          <a href="https://github.com/priyanshu6396274892/Code-with-Harry-website-Clone-.git">GitHub</a>
+          <a
+            href="https://github.com/priyanshu6396274892/Code-with-Harry-website-Clone-.git"
+            >GitHub</a
+          >
         </div>
       </div>
     </section>
@@ -117,6 +123,27 @@
       </form>
     </section>
 
+    <footer class="bottom-nav">
+      <div class="footer-brand">
+        <span>© 2026 Priyanshu</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/priyanshu6396274892" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="mailto:priyanshu6396274892@gmail.com"
+          ><i class="fas fa-envelope"></i> priyanshu6396274892@gmail.com</a
+        >
+        <a href="tel:+916396274892"
+          ><i class="fas fa-phone"></i> +91 6396274892</a
+        >
+      </div>
+    </footer>
     <!-- javaScript start  -->
 
     <script>
@@ -143,28 +170,28 @@
       let wordIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
-     function typeEffect() {
-  const currentWord = words[wordIndex];
+      function typeEffect() {
+        const currentWord = words[wordIndex];
 
-  if (isDeleting) {
-    charIndex--;
-  } else {
-    charIndex++;
-  }
+        if (isDeleting) {
+          charIndex--;
+        } else {
+          charIndex++;
+        }
 
-  if (!isDeleting && charIndex > currentWord.length) {
-    isDeleting = true;
-  } else if (isDeleting && charIndex < 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    charIndex = 0;
-  }
+        if (!isDeleting && charIndex > currentWord.length) {
+          isDeleting = true;
+        } else if (isDeleting && charIndex < 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          charIndex = 0;
+        }
 
-  const currentLetter = currentWord.substring(0, charIndex);
-  targetSection.textContent = currentLetter;
+        const currentLetter = currentWord.substring(0, charIndex);
+        targetSection.textContent = currentLetter;
 
-  setTimeout(typeEffect, isDeleting ? 75 : 150); 
-}
+        setTimeout(typeEffect, isDeleting ? 75 : 150);
+      }
       typeEffect();
     </script>
   </body>

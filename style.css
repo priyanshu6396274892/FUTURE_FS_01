@@ -306,3 +306,63 @@ nav {
   line-height: 1.7;
   margin-bottom: 25px;
 }
+/* Bottom Navbar Styling */
+.bottom-nav {
+    background-color: #111111; /* Dark black background */
+    border-top: 2px solid #ffb400; /* Yellow/Orange top border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    margin-top: 50px;
+}
+
+/* New Seamless Bottom Nav Styling */
+.bottom-nav {
+    background-color: transparent; /* Black background hata diya */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ekdum patli, dhundhli safed line separator */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    margin-top: 80px; /* Thoda gap taaki upar wale content se chipke na */
+}
+
+.footer-brand span {
+    color: rgba(255, 255, 255, 0.6); /* Text ko thoda soft white kiya */
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #ffffff; /* Default color white */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover karne par wahi signature yellow/orange glow milega */
+.footer-links a:hover {
+    color: #ffb400; 
+}
+
+/* Mobile responsive ke liye */
+@media (max-width: 768px) {
+    .bottom-nav {
+        flex-direction: column-reverse; /* Mobile par copy-paste text niche chala jayega */
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
